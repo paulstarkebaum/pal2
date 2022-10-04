@@ -7,7 +7,7 @@
 // control D to select next, paste. ctrl U if you select too many. 
 
 module.exports = Phrase;
-console.log('hello in index.js');
+console.log('hello in index.js v0.1.1');
 // Adds .reverse method to all strings.
 String.prototype.reverse = function () {
 	return Array.from(this).reverse().join("");
