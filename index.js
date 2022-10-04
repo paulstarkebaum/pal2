@@ -7,7 +7,7 @@
 // control D to select next, paste. ctrl U if you select too many. 
 
 module.exports = Phrase;
-
+console.log('hello in index.js');
 // Adds .reverse method to all strings.
 String.prototype.reverse = function () {
 	return Array.from(this).reverse().join("");
@@ -27,7 +27,10 @@ function Phrase(content) {
 		// });
 		// return theLetters.join("");
 		// return Array.from(this.content).filter(c => c.match(/[a-z]/i)).join("");
-		return(this.content.match(/[a-z]/gi) || []).join("");
+		const lettersRegEx = /[a-z]/gi;
+		return(this.content.match(lettersRegEx) || []).join("");
+		// return(this.content.match(/[a-z]/gi)).join("");
+
 	}
 
 	this.processedContent = function processedContent() {
@@ -36,6 +39,7 @@ function Phrase(content) {
 
 	this.palindrome = function palindrome() {
 		console.log(`${this.processedContent()} = ${this.processedContent().reverse()}`)
+		console.log(`index log`);
 		return this.processedContent() === this.processedContent().reverse();
 
 	}
