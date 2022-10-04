@@ -1,6 +1,6 @@
 {
   "name": "pstark-pal2",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Palindrom detector",
   "main": "index.js",
   "scripts": {
