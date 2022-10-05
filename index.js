@@ -7,7 +7,8 @@
 // control D to select next, paste. ctrl U if you select too many. 
 
 module.exports = Phrase;
-console.log('hello in index.js v0.1.1');
+console.log('hello 4!');
+
 // Adds .reverse method to all strings.
 String.prototype.reverse = function () {
 	return Array.from(this).reverse().join("");
@@ -34,13 +35,21 @@ function Phrase(content) {
 	}
 
 	this.processedContent = function processedContent() {
-		return this.letters().toLowerCase();
+		if (this.letters().toLowerCase().length < 1) {
+			return false;
+		} else {
+			return this.letters().toLowerCase();
+		}
 	}
 
 	this.palindrome = function palindrome() {
-		console.log(`${this.processedContent()} = ${this.processedContent().reverse()}`)
-		console.log(`index log`);
-		return this.processedContent() === this.processedContent().reverse();
+		// console.log(`${this.processedContent()} = ${this.processedContent().reverse()}`)
+		console.log(`import fresh`);
+		if (this.processedContent()) {
+			return this.processedContent() === this.processedContent().reverse();			
+		} else {
+			return false;
+		}
 
 	}
 }

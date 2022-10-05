@@ -1,5 +1,6 @@
 let assert =  require ("assert");
-let Phrase =  require("../index.js");
+let importFresh = require("import-fresh")
+let Phrase =  importFresh("../index.js");
 
 describe("Phrase", function () {
 	describe("#palindrome", function () {
@@ -21,6 +22,10 @@ describe("Phrase", function () {
 			let punctuatedPalindrome = new Phrase("Madam, I'm Adam.");
 			assert(punctuatedPalindrome.palindrome());
 		});
+		it("should return false for an empty string.", function() {
+			let emptyString = new Phrase("");
+			assert(!emptyString.palindrome());
+		})
 	});
 	describe("#letters", function() {
 		it("should return only letters", function() {
