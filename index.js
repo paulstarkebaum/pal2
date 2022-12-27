@@ -7,7 +7,7 @@
 // control D to select next, paste. ctrl U if you select too many. 
 
 module.exports = Phrase;
-console.log('hello 4!');
+// console.log('hello 4!');
 
 // Adds .reverse method to all strings.
 String.prototype.reverse = function () {
@@ -44,7 +44,7 @@ function Phrase(content) {
 
 	this.palindrome = function palindrome() {
 		// console.log(`${this.processedContent()} = ${this.processedContent().reverse()}`)
-		console.log(`import fresh`);
+		// console.log(`import fresh`);
 		if (this.processedContent()) {
 			return this.processedContent() === this.processedContent().reverse();			
 		} else {
